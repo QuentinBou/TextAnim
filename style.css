@@ -1,0 +1,48 @@
+body {
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 3rem;
+    transition: background-color .8s;
+}
+#target {
+    display: flex;
+    margin-left: 1rem;
+    position: relative;
+    user-select: none;
+}
+span:last-child:after{
+    content: "";
+    position: absolute;
+    height: 3rem;
+    width: 3.5px;
+    background: black;
+    top: 0;
+    transform: translateY(14px);
+    margin-left: 5px;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-duration: .8s;
+    opacity: 1;
+    transition: blink .8s linear infinite;
+}
+span{
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+}
+h3 {
+    user-select: none;
+}
+
+@keyframes blink {
+    50% {
+        opacity: .1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
